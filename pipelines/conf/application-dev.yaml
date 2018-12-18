@@ -1,0 +1,30 @@
+elasticsearch:
+  hosts: DEV-FHCB-09-ES001:9200
+  index: web_page_p_book_info_09
+  index1: web_page_p_book_comment_09
+
+
+mysql:
+  host: DEV-FHCB-09-WEB001
+  port: 3306
+  username: root
+  password: 'root'
+  dbname: douban_book
+  dbname_cate: douban_book
+  dbname_sale_cate: douban_book
+  dbname_org: douban_book
+  charset: utf8mb4
+  book_table: web_page_p_book_info_09_dangdang
+  comment_table: web_page_p_book_comment_09_dangdang
+
+nginxpath:  http://DEV-FHCB-0910-WEB001
+
+activemq:
+  host: DEV-FHCB-09-SPIDER001
+  port: 61613
+  queue_name: '09_p_spider'
+  listener_name: 'BookListener'
+
+image:
+  path: D:/opt/fhcb/fileserver/img
+

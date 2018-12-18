@@ -1,0 +1,12 @@
+2018-11-22 10:34:30 - categoryServer - INFO - 129 - 查无此营销分类========>salecategory_name：其他舞蹈
+2018-11-22 10:34:32 - categoryServer - INFO - 101 - 中图数据库查询========>isbn：9787552313024  分类为：J647.41
+2018-11-22 10:34:32 - pipelines - INFO - 84 - mysql插入===book_info===数据成功：http://product.dangdang.com/1124265385.html
+2018-11-22 10:35:45 - categoryServer - INFO - 131 - 查询营销分类========>salecategory_name：舞蹈理论  ID为：101202
+2018-11-22 10:35:45 - categoryServer - INFO - 99 - 中图数据库查无此isbn：9787503964022转为中图服务器查询
+2018-11-22 10:35:57 - categoryServer - INFO - 83 - 中图服务器查询========>isbn：9787503964022  分类为：J809.249
+2018-11-22 10:35:57 - pipelines - INFO - 84 - mysql插入===book_info===数据成功：http://product.dangdang.com/1123421985.html
+2018-11-22 10:37:27 - categoryServer - INFO - 129 - 查无此营销分类========>salecategory_name：其他舞蹈
+2018-11-22 10:37:27 - categoryServer - INFO - 99 - 中图数据库查无此isbn：9787562193890转为中图服务器查询
+2018-11-22 10:38:03 - categoryServer - ERROR - 73 - HTTPConnectionPool(host='114.238.125.212', port=43330): Read timed out.
+2018-11-22 10:38:03 - categoryServer - INFO - 77 - 中图服务器查询查无此isbn：9787562193890
+2018-11-22 10:38:04 - pipelines - INFO - 84 - mysql插入===book_info===数据成功：http://product.dangdang.com/1103848310.html

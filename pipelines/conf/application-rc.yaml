@@ -1,0 +1,26 @@
+elasticsearch:
+  hosts: RC-FHCB-09-ES001:9200
+  index: web_page_p_book_info_09
+  index1: web_page_p_book_comment_09
+
+mysql:
+  host: RC-FHCB-09-MYSQL001
+  port: 3306
+  username: root
+  password: 'root'
+  dbname: rc-09inter
+  dbname_cate: rc-09spider
+  dbname_sale_cate: rc-09web
+  dbname_org: rc-09web
+  charset: utf8mb4
+  book_table: web_page_p_book_info_09_dangdang
+  comment_table: web_page_p_book_comment_09_dangdang
+
+activemq:
+  host: RC-FHCB-09-WEB001
+  port: 61613
+  queue_name: '09_p_spider'
+  listener_name: 'BookListener'
+
+image:
+  path: /mountImg/fhcb/fileserver/img
