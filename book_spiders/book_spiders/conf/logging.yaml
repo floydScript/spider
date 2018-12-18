@@ -1,0 +1,33 @@
+version: 1
+
+formatters:
+  basic:
+    format: "%(asctime)s - %(module)s - %(levelname)s - %(lineno)d - %(message)s"
+    datefmt: "%Y-%m-%d %H:%M:%S"
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: basic
+    stream: ext://sys.stdout
+  file:
+    class: logging.handlers.TimedRotatingFileHandler
+    level: INFO
+    formatter: basic
+    backupCount: 30 # 最多保留多少个日志文件
+    encoding: utf8
+    when: D
+    interval: 1
+  error:
+    class: logging.handlers.RotatingFileHandler
+    level: ERROR
+    formatter: basic
+    filename: log/error.log
+    maxBytes: 10485760
+    backupCount: 20
+    encoding: utf8
+
+root:
+  level: INFO
+  handlers: [console, file, error]

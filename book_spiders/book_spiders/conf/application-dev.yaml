@@ -1,0 +1,27 @@
+image:
+  path: /opt/fhcb/fileserver/img
+
+
+mysql:
+  host: DEV-FHCB-09-WEB001
+  port: 3306
+  dbname: douban_book
+  dbname_inter: douban_book #排行榜数据库
+  username: root
+  password: 'root'
+
+activemq:
+  host: DEV-FHCB-09-SPIDER001
+  port: 61613
+  queue_name: '09_p_spider'
+  listener_name: 'BookListener'
+
+#
+redis:
+  host: DEV-FHCB-0910-REDIS001
+  port: 6379
+  password: ''
+  db: 1
+
+kafka:
+  host: DEV-FHCB-09-HD001:9092

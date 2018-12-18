@@ -1,0 +1,25 @@
+image:
+  path: /opt/fhcb/fileserver/img
+
+mysql:
+  host: PROD-FHCB-09-WEB001
+  port: 3306
+  dbname: 09spider
+  dbname_inter: 09inter_dev #排行榜数据库
+  username: root
+  password: 'root@123456'
+
+activemq:
+  host: PROD-FHCB-09-SPIDER001
+  port: 61613
+  queue_name: '09_p_spider'
+  listener_name: 'BookListener'
+
+redis:
+  host: PROD-FHCB-0910-REDIS001
+  port: 6379
+  password: 'tianwendc2016@t-w'
+  db: 1
+
+kafka:
+  host: PROD-FHCB-09-HD001:9092
