@@ -160,7 +160,7 @@ class Toplist_jd(RedisSpider):
                     comment_item['commentid'] = str(comment['id'])
                     comment_item['followcommentid'] = ''
                     comment_item['commenttitle'] = ''
-                    comment_item['commenttype'] = '1'
+                    comment_item['commenttype'] = '0'
                     comment_item['comment'] = comment['content']
                     score = str(comment['score'])
                     if not score:

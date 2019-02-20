@@ -161,7 +161,7 @@ class Test_spider(scrapy.Spider):
                 comment_item['commentid'] = comment['mediaDigestId']
                 comment_item['followcommentid'] = ''
                 comment_item['commenttitle'] = ''
-                comment_item['commenttype'] = '1'
+                comment_item['commenttype'] = '0'
                 comment_item['comment'] = comment['content']
                 comment_item['score'] = '5'
                 comment_item['level'] = '0'

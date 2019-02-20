@@ -3,7 +3,6 @@ import re
 import time
 
 import requests
-
 from book_spiders.items import BookItem
 from book_spiders.items import CommentItem
 
@@ -33,6 +32,7 @@ class Toplist_dd_e(RedisSpider):
     redis_key = 'toplist_dd_e:start_urls'
 
     _logger = Logger().getLogger()
+
 
     def parse(self, response):
         item = BookItem()
@@ -137,8 +137,8 @@ class Toplist_dd_e(RedisSpider):
         item['authorintro'] = ''
         item['sourceprice'] = ''
         # 获取评论列表
-
         comments = self.get_comments(skuid)
+
         # 遍历评论列表
         for comment in comments:
             comment_item = CommentItem()
@@ -160,7 +160,7 @@ class Toplist_dd_e(RedisSpider):
                 comment_item['commentid'] = comment['mediaDigestId']
                 comment_item['followcommentid'] = ''
                 comment_item['commenttitle'] = ''
-                comment_item['commenttype'] = '1'
+                comment_item['commenttype'] = '0'
                 comment_item['comment'] = comment['content']
                 comment_item['score'] = '5'
                 comment_item['level'] = '0'

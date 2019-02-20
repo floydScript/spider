@@ -202,7 +202,7 @@ class Toplist_amazon_e(RedisSpider):
                     if not commenttitle:
                         commenttitle = ''
                     comment_item['commenttitle'] = commenttitle
-                    comment_item['commenttype'] = '1'
+                    comment_item['commenttype'] = '0'
                     comment_strs = comment.xpath(".//div[@data-hook='review-collapsed']/text()").extract()
                     comment_strs = ''.join(comment_strs)
                     comment_item['comment'] = comment_strs
