@@ -526,6 +526,18 @@ class ElasticSearchPipelines():
                 self.es.index(index=item['_entitycode'], doc_type=item['_entitycode'], id=id, body=item)
                 self._logger.info('es新增数据成功:' + item['url'])
         elif item['_entitycode'] == 'web_page_p_book_comment_09':
+            if item['type'] == '02':
+                body = {
+                    "query": {
+                        "term": {
+                            "skuid": item['skuid']
+                        }
+                    }
+                }
+                result = self.es.search(index="web_page_p_book_info_09", doc_type="web_page_p_book_info_09", body=body)
+                terms = result['hits']['hits']
+                if not terms:
+                    return None
             id = item['_row']
             self.es.index(index=item['_entitycode'], doc_type=item['_entitycode'], id=id, body=item)
             self._logger.info('es新增数据成功:'+item['uri'])

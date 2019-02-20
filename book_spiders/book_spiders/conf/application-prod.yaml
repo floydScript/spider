@@ -21,5 +21,6 @@ redis:
   password: 'tianwendc2016@t-w'
   db: 1
 
-kafka:
-  host: PROD-FHCB-09-HD001:9092
+elasticsearch:
+  hosts: PROD-FHCB-09-ES001:9200
+  index: web_page_p_book_info_09

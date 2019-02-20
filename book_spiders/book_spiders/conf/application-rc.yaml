@@ -1,7 +1,6 @@
 image:
   path: /data/file/fhcb/fileserver/img
 
-
 mysql:
   host: RC-FHCB-09-MYSQL001
   port: 3306
@@ -10,19 +9,19 @@ mysql:
   username: root
   password: 'root'
 
-
-
 activemq:
   host: RC-FHCB-09-WEB001
   port: 61613
   queue_name: '09_p_spider'
   listener_name: 'BookListener'
 
-#
 redis:
   host: RC-FHCB-09-REDIS01
   port: 6379
   password: 'tianwendc2016@t-w'
   db: 1
 
+elasticsearch:
+  hosts: RC-FHCB-09-ES001:9200
+  index: web_page_p_book_info_09
 
